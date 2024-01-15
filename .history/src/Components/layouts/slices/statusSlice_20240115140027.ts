@@ -8,16 +8,10 @@ interface StatusData {
 
 interface Status {
     statusData: StatusData[];
-    selectedStatus: StatusData;
 }
 
 const initialState: Status = {
     statusData: [],
-    selectedStatus: {
-        code: "",
-        name: "",
-        count: 0
-    }
 };
 
 const chatStatus: Status = {
@@ -30,24 +24,19 @@ const chatStatus: Status = {
         {
             code: 'wrok',
             name: "상담",
-            count: 90
+            count: 100
         },
         {
             code: 'check',
             name: "확인",
-            count: 80
+            count: 100
         },
         {
             code: 'close',
             name: "종료",
-            count: 70
+            count: 100
         },
     ],
-    selectedStatus: {
-        code: 'wrok',
-        name: "상담",
-        count: 100
-    }
 };
 
 
@@ -58,11 +47,9 @@ export const statusSlice = createSlice({
     setChatStatus: (state) => {
         state.statusData = chatStatus.statusData;
     },
-    setSelectedChatStatus: (state, action: PayloadAction<StatusData>) => {
-        state.selectedStatus = action.payload;
-    },
+    // selectedStatus: (state, p)
   }
 });
 
-export const { setChatStatus, setSelectedChatStatus } = statusSlice.actions;
+export const { setChatStatus } = statusSlice.actions;
 export default statusSlice;

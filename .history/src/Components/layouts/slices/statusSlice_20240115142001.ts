@@ -1,17 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Status } from '../layouts.interface';
 
 interface StatusData {
-    code: string;
-    name: string;
-    count: number;
+    statusData: Status[];
+    selectedStatus: Status;
 }
 
-interface Status {
-    statusData: StatusData[];
-    selectedStatus: StatusData;
-}
-
-const initialState: Status = {
+const initialState: StatusData = {
     statusData: [],
     selectedStatus: {
         code: "",
@@ -20,7 +15,7 @@ const initialState: Status = {
     }
 };
 
-const chatStatus: Status = {
+const chatStatus: StatusData = {
     statusData: [
         {
             code: 'standby',
@@ -30,17 +25,17 @@ const chatStatus: Status = {
         {
             code: 'wrok',
             name: "상담",
-            count: 90
+            count: 100
         },
         {
             code: 'check',
             name: "확인",
-            count: 80
+            count: 100
         },
         {
             code: 'close',
             name: "종료",
-            count: 70
+            count: 100
         },
     ],
     selectedStatus: {
@@ -58,7 +53,7 @@ export const statusSlice = createSlice({
     setChatStatus: (state) => {
         state.statusData = chatStatus.statusData;
     },
-    setSelectedChatStatus: (state, action: PayloadAction<StatusData>) => {
+    setSelectedChatStatus: (state, action: PayloadAction<Status>) => {
         state.selectedStatus = action.payload;
     },
   }

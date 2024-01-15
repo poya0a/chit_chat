@@ -8,7 +8,7 @@ import arrow from '../../assets/images/icons/arrowUp.svg';
 const Status = () => {
 
     const dispatch = useAppDispatch();
-    const { statusData, selectedStatus } = useAppSelector((state) => state.status);
+    const { statusData, selectedStatus } = useAppSelector((state) => state.status)
     const [myStatus, setMyStatus] = useState('');
     const [arrowDirection, setArrowDirection] = useState(false);
 
@@ -32,12 +32,6 @@ const Status = () => {
         dispatch(setChatStatus());      
         setMyStatus(selectStatusData[0].code);
     },[]);
-
-    useEffect(() => {
-        if(statusData.length > 0){
-            dispatch(setSelectedChatStatus(statusData[1]));
-        }
-    },[statusData]);
 
     const onClickMyStatus = (status: string) => {
         setMyStatus(status);

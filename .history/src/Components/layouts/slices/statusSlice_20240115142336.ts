@@ -30,17 +30,17 @@ const chatStatus: Status = {
         {
             code: 'wrok',
             name: "상담",
-            count: 90
+            count: 100
         },
         {
             code: 'check',
             name: "확인",
-            count: 80
+            count: 100
         },
         {
             code: 'close',
             name: "종료",
-            count: 70
+            count: 100
         },
     ],
     selectedStatus: {
@@ -60,6 +60,7 @@ export const statusSlice = createSlice({
     },
     setSelectedChatStatus: (state, action: PayloadAction<StatusData>) => {
         state.selectedStatus = action.payload;
+        console.log(action.payload);
     },
   }
 });

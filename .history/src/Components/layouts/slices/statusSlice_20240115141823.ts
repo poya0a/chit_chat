@@ -1,10 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { StatusData } from '../layouts.interface';
 
-interface StatusData {
-    code: string;
-    name: string;
-    count: number;
-}
 
 interface Status {
     statusData: StatusData[];
@@ -30,17 +26,17 @@ const chatStatus: Status = {
         {
             code: 'wrok',
             name: "상담",
-            count: 90
+            count: 100
         },
         {
             code: 'check',
             name: "확인",
-            count: 80
+            count: 100
         },
         {
             code: 'close',
             name: "종료",
-            count: 70
+            count: 100
         },
     ],
     selectedStatus: {

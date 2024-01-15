@@ -10,7 +10,7 @@ const ChatRoom = () => {
             <div className="roomListWrap">
                 <div className='roomList'>
                     <div className='listHeader'>
-                        <p>{selectedStatus.name} 목록 <i>{selectedStatus.count}</i></p>
+                        <p>상담 목록 <i>10</i></p>
                         <button className='roomSearch'><i></i></button>
                     </div>
                 </div>

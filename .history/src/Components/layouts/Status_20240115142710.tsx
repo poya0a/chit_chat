@@ -8,7 +8,7 @@ import arrow from '../../assets/images/icons/arrowUp.svg';
 const Status = () => {
 
     const dispatch = useAppDispatch();
-    const { statusData, selectedStatus } = useAppSelector((state) => state.status);
+    const { statusData, selectedStatus } = useAppSelector((state) => state.status)
     const [myStatus, setMyStatus] = useState('');
     const [arrowDirection, setArrowDirection] = useState(false);
 
@@ -34,10 +34,8 @@ const Status = () => {
     },[]);
 
     useEffect(() => {
-        if(statusData.length > 0){
-            dispatch(setSelectedChatStatus(statusData[1]));
-        }
-    },[statusData]);
+        console.log(selectedStatus);
+    },[selectedStatus]);
 
     const onClickMyStatus = (status: string) => {
         setMyStatus(status);
@@ -57,7 +55,7 @@ const Status = () => {
             <div className="chatStatusWrap">
                 <ul className='statusList'>
                     {statusData.map((status) => (
-                        <li className='status' key={status.code} onClick={() => dispatch(setSelectedChatStatus(status))}>
+                        <li className='status' key={status.code} onClick={() => setSelectedChatStatus(status)}>
                             <p>{status.name}</p>
                             <em className={selectedStatus.code === status.code? 'active' : ''}>{status.count}</em>
                         </li>
