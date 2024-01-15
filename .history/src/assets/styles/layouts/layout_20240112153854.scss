@@ -1,0 +1,17 @@
+.wrap {
+    .content {
+      .layoutWrap {
+        display: flex;
+        .layout {
+          padding: 10px;
+          .mainWrap {
+            display: flex;
+            main {
+            }
+          }
+        }
+      }
+      
+    }
+  }
+  

@@ -1,0 +1,15 @@
+.chatRoom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    .roomList {
+        width: 25%;
+        padding-right: 10px;
+        background-color: $color_gray11;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+        border-radius: 5px;
+    }
+    .roomWrap {
+        
+    }
+}

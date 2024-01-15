@@ -1,0 +1,14 @@
+.wrap {
+    max-width: 768px;
+    margin: auto;
+    user-select: none;
+    .content {
+      main {
+        padding-top: 60px;
+        .sectionWrap {
+          padding: 0 16px;
+        }
+      }
+    }
+  }
+  

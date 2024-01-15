@@ -1,0 +1,21 @@
+.statusWrap {
+    width: 100%;
+    height: 50px;
+    background-color: $color_gray11;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    .chatStatusWrap {
+        padding: 14px;
+        .statusList {
+            display: flex;
+            .status {
+                display: flex;
+                margin-right: 10px;
+                 > p {}
+                 > em {}
+            }
+        }
+    }
+}

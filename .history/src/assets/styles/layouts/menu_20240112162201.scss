@@ -1,0 +1,28 @@
+.menuWrap {
+    width: 200px;
+    height: 100vh;
+    background-color: $color_blue;
+    .workSpaceWrap {
+        width: 100%;
+        height: 70px;
+        padding: 10px 20px;
+        display: flex;
+        .menuToggleButton {
+            width: 50px;
+            height: 50px;
+            margin-right: 5px;
+            > i {
+                width: 40px;
+                height: 40px;
+                // display: inline-block;
+                color: $color_white;
+            }
+        }
+        .workSpace {
+            > p {
+                @include bold_20
+                color: $color_primary;
+            }
+        }
+    }
+}

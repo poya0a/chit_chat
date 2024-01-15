@@ -1,0 +1,35 @@
+.statusWrap {
+    width: 100%;
+    height: 50px;
+    background-color: $color_gray11;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    .chatStatusWrap {
+        padding: 17px 20px;
+        .statusList {
+            display: flex;
+            .status {
+                display: flex;
+                margin-right: 10px;
+                @include bold_12;
+                &:last-child {
+                    margin: 0;
+                }
+                 > em {
+                    padding: 0 5px;
+                    margin-left: 2px;
+                    border-radius: 5px;
+                    color: $color_white;
+                    display: block;
+                    vertical-align: bottom;
+                    background-color: $color_neutrals60;
+                    &.active {
+                        background-color: $color_primary;
+                    }
+                 }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+import React from 'react';
+import Room from './Room';
+
+const ChatRoom = () => {
+    return (
+        <div className='chatRoom'>
+            <div className="roomListWrap">
+                <div className='roomList'>
+                    <div className='listHeader'>
+                        <p>상담 목록 <i>10</i></p>
+                    </div>
+                </div>
+            </div>
+            <Room />
+        </div>
+    );
+};
+
+export default ChatRoom;

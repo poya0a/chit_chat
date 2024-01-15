@@ -1,0 +1,24 @@
+.wrap {
+  width: 100%;
+  height: 100%;
+    .content {
+      width: 100%;
+      height: 100%;
+      .layoutWrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        .layout {
+          width: 100%;
+    
+          .mainWrap {
+            display: flex;
+            main {
+            }
+          }
+        }
+      }
+      
+    }
+  }
+  

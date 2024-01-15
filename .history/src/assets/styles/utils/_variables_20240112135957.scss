@@ -1,0 +1,130 @@
+// font
+$en: 'spoqa-han-sans', sans-serif;
+$ko: 'spoqa-han-sans', 'Pretendard-Regular', sans-serif;
+
+// break-point
+$breakpoint-pc: 1024px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 360px;
+$breakpoint-smallest: 270px;
+
+// 반응형 분기점
+@mixin container {
+  @media (max-width: #{$container-width}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: #{$breakpoint-pc - 1px}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+// 320px 까지 맞출시 사용
+@mixin smallest {
+  @media (min-width:#{$breakpoint-smallest}) and (max-width:#{$breakpoint-mobile - 1px}) {
+    @content;
+  }
+}
+
+// colors
+$color_white: #ffffff;
+$color_black: #000000;
+
+$color_error: #d32f2f;
+$color_warning: #f9a825;
+$color_confirmed: #4caf50;
+
+$color_neutrals: #1f1f1f;
+$color_neutrals90: #343434;
+$color_neutrals80: #4b4b4b;
+$color_neutrals60: #787878;
+$color_neutrals40: #a5a5a5;
+$color_neutrals20: #d2d2d2;
+$color_neutrals10: #e8e8e8;
+$color_neutrals5: #f3f3f3;
+
+$color_primary: #543ac4;
+$color_primary90: #644dc9;
+$color_primary80: #7661cf;
+$color_primary60: #9888db;
+$color_primary40: #bab0e7;
+$color_primary20: #ddd7f3;
+$color_primary10: #edebf9;
+$color_primary5: #f6f5fc;
+
+$color_secondary_blue100: #0a7fa3;
+$color_secondary_blue90: #228bac;
+$color_secondary_blue: #3b98b5;
+$color_secondary_blue60: #6cb2c8;
+$color_secondary_blue40: #9dccda;
+$color_secondary_blue20: #cee5ed;
+$color_secondary_blue10: #e6f2f6;
+$color_secondary_blue5: #f2f8fa;
+
+$color_secondary_mustard: #ffe152;
+$color_secondary_mustard90: #ffe462;
+$color_secondary_mustard80: #ffe774;
+$color_secondary_mustard60: #ffed97;
+$color_secondary_mustard40: #fff3b9;
+$color_secondary_mustard20: #fff9dc;
+$color_secondary_mustard10: #fffced;
+$color_secondary_mustard5: #fffef6;
+
+$color_input_focus: #414141;
+$color_input_placeholder: #999999;
+$color_btn_disabled: #f5f5f5;
+$color_btn_disabled_border: #dbdbdb;
+
+// $color_primary: #313fc4;
+$color_secondary: #4876ee;
+
+$color_point1: #6cc4e9;
+$color_point2: #185cdc;
+$color_point3: #3d4543;
+$color_point4: #a0bbc0;
+$color_point5: #e37363;
+$color_point6: #283fb4;
+$color_point7: #7c809f;
+$color_point8: #3b46ae;
+$color_point9: #b9c3d7;
+
+$color_bgray1: #050d1b;
+$color_bgray2: #282e3b;
+$color_bgray3: #454b5a;
+$color_bgray4: #585e6d;
+$color_bgray5: #7e8595;
+$color_bgray6: #a0a6b7;
+$color_bgray7: #c5ccdd;
+$color_bgray8: #dae0ee;
+$color_bgray9: #e2e7f4;
+$color_bgray10: #eff2f9;
+$color_bgray11: #f7f8fd;
+
+$color_gray1: #1f1f1f;
+$color_gray2: #2d2d2d;
+$color_gray3: #404040;
+$color_gray4: #5f5f5f;
+$color_gray5: #727272;
+$color_gray6: #9b9b9b;
+$color_gray7: #bbbbbb;
+$color_gray8: #dedede;
+$color_gray9: #ececec;
+$color_gray10: #f4f4f4;
+$color_gray11: #fafafa;
+$color_gray12: #717171;
+$color_gray13: #343434;
+$color_gray14: #c7c7c7;
+$color_gray15: #4d4d4d;
+$color_gray16: #d5d5d5;
+$color_gray17: #d9d9d9;
+$color_grayDark: #4f555e;
+
+$color_reserv_blue: #0091ea;
+$color_reserv_green: #4caf50;
+$color_reserv_yellow: #f9a825;
+$color_reserv_gray: #6d6d6d;

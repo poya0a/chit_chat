@@ -1,0 +1,21 @@
+.wrap {
+    .content {
+      .layoutWrap {
+        display: flex;
+        .layout {
+          padding: 10px;
+          width: calc(100% - 200px);
+          background-color: $color_neutrals5;
+          .mainWrap {
+            display: flex;
+            padding-top: 10px;
+            height: calc(100% - 50px);
+            main {
+            }
+          }
+        }
+      }
+      
+    }
+  }
+  

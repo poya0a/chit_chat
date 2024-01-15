@@ -1,0 +1,133 @@
+// 정렬
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+@mixin center_top {
+  @include center;
+  left: 0;
+  transform: translate(0, -50%);
+}
+@mixin center_left {
+  @include center;
+  top: 0;
+  transform: translate(-50%, 0);
+}
+
+// typo
+@mixin bold_32 {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+@mixin bold_20 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@mixin bold_18 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@mixin bold_16 {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+@mixin bold_14 {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+@mixin bold_13 {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+@mixin bold_12 {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+@mixin medium_32 {
+  font-weight: medium;
+  font-size: 32px;
+}
+
+@mixin medium_24 {
+  font-weight: medium;
+  font-size: 24px;
+}
+
+@mixin medium_20 {
+  font-weight: medium;
+  font-size: 20px;
+}
+
+@mixin medium_18 {
+  font-weight: medium;
+  font-size: 18px;
+}
+
+@mixin medium_16 {
+  font-weight: medium;
+  font-size: 16px;
+}
+
+@mixin medium_14 {
+  font-weight: medium;
+  font-size: 14px;
+}
+@mixin medium_13 {
+  font-weight: medium;
+  font-size: 13px;
+}
+
+@mixin medium_12 {
+  font-weight: medium;
+  font-size: 12px;
+}
+
+@mixin regular_32 {
+  font-weight: regular;
+  font-size: 32px;
+}
+
+@mixin regular_20 {
+  font-weight: regular;
+  font-size: 20px;
+}
+
+@mixin regular_18 {
+  font-weight: regular;
+  font-size: 18px;
+}
+
+@mixin regular_16 {
+  font-weight: regular;
+  font-size: 16px;
+}
+
+@mixin regular_14 {
+  font-weight: regular;
+  font-size: 14px;
+}
+
+@mixin regular_13 {
+  font-weight: regular;
+  font-size: 13px;
+}
+
+@mixin regular_12 {
+  font-weight: regular;
+  font-size: 12px;
+}
+
+@mixin regular_10 {
+  font-weight: regular;
+  font-size: 10px;
+}

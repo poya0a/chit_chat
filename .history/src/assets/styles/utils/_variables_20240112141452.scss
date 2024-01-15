@@ -1,0 +1,68 @@
+// break-point
+$breakpoint-pc: 1024px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 360px;
+$breakpoint-smallest: 270px;
+
+// 반응형 분기점
+@mixin container {
+  @media (max-width: #{$container-width}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: #{$breakpoint-pc - 1px}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+// 320px 까지 맞출시 사용
+@mixin smallest {
+  @media (min-width:#{$breakpoint-smallest}) and (max-width:#{$breakpoint-mobile - 1px}) {
+    @content;
+  }
+}
+
+// colors
+$color_primary: #89a8ff;
+$color_secondary: #abbdff;
+$color_blue: #0B1D78;
+
+$color_white: #ffffff;
+$color_black: #000000;
+
+$color_error: #d32f2f;
+$color_warning: #f9a825;
+$color_confirmed: #4caf50;
+
+$color_neutrals: #1f1f1f;
+$color_neutrals90: #343434;
+$color_neutrals80: #4b4b4b;
+$color_neutrals60: #787878;
+$color_neutrals40: #a5a5a5;
+$color_neutrals20: #d2d2d2;
+$color_neutrals10: #e8e8e8;
+$color_neutrals5: #f3f3f3;
+
+$color_gray1: #1f1f1f;
+$color_gray2: #2d2d2d;
+$color_gray3: #404040;
+$color_gray4: #5f5f5f;
+$color_gray5: #727272;
+$color_gray6: #9b9b9b;
+$color_gray7: #bbbbbb;
+$color_gray8: #dedede;
+$color_gray9: #ececec;
+$color_gray10: #f4f4f4;
+$color_gray11: #fafafa;
+$color_gray12: #717171;
+$color_gray13: #343434;
+$color_gray14: #c7c7c7;
+$color_gray15: #4d4d4d;
+$color_gray16: #d5d5d5;
+$color_gray17: #d9d9d9;
+$color_grayDark: #4f555e;
