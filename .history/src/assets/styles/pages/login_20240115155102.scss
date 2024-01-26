@@ -1,0 +1,57 @@
+.loginWrap {
+    width: 100%;
+    height: 100%;
+    padding: 100px 20px;
+    > img {
+        width: 150px;
+        margin: auto;
+    }
+}
+
+form {
+    margin: auto;
+    .formArea {
+
+    }
+    
+}
+
+.inputArea {
+    position: relative;
+    margin: 24px 0 0;
+    label {
+        position: relative;
+        font-size: 14px;
+        font-weight: 600;
+        color: $color_neutrals;
+    }
+    input {
+        width: 100%;
+        height: 54px;
+        margin: 6px 0 0;
+        border-bottom: 1px solid $color_btn_disabled_border;
+        font-size: 13px;
+        line-height: 45px;
+        color: $color_neutrals;
+        background-repeat: no-repeat;
+        background-size: 18px;
+        background-position: right 18px center;
+        &::placeholder {
+          font-size: 14px;
+          color: $color_input_placeholder;
+        }
+        &:focus {
+          border-bottom: 1px $color_primary;
+        }
+    }
+    .errorMessage {}
+}
+
+.buttonArea {
+       .whiteButton {} 
+       .blueButton {} 
+}
+
+.informationArea {
+    > a {}
+}

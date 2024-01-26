@@ -1,0 +1,27 @@
+.loginWrap {
+    width: 100%;
+    height: 100%;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, $color_primary, $color_blue, $color_blue);
+    > img {
+        width: 150px;
+        margin: auto;
+    }
+}
+
+form {
+    margin: auto;
+    .formArea {
+
+    }
+    
+}
+
+.buttonArea {
+       .whiteButton {} 
+       .blueButton {} 
+}
+
+.informationArea {
+    > a {}
+}

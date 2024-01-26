@@ -1,0 +1,33 @@
+.menuWrap {
+    width: 200px;
+    height: 100vh;
+    background-color: $color_blue;
+    .workSpaceWrap {
+        width: 100%;
+        height: 70px;
+        padding: 10px 20px;
+        display: flex;
+        .menuToggleButton {
+            width: 30px;
+            height: 50px;
+            padding-bottom: 5px;
+            margin-right: 10px;
+            > img {
+                width: 30px;
+                height: 30px;
+                font-size: 20px;
+            }
+        }
+        .workSpace {
+            > p {
+                @include bold_32;
+                color: $color_primary;
+                vertical-align: baseline;
+            }
+        }
+    }
+    .addordionMenuWrap {
+        width: 100%;
+        overflow-y: scroll;
+    }
+}

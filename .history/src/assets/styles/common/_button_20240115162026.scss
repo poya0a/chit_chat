@@ -1,0 +1,16 @@
+.buttonArea {
+    width: 100%;
+
+    button {
+        &.whiteButton {
+            width: 100%;
+            display: block;
+        } 
+        &.blueButton {}
+    }
+     
+}
+
+.informationArea {
+ > a {}
+}
