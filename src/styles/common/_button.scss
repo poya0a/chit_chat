@@ -1,0 +1,37 @@
+div.Button {
+    width: 100%;
+    margin: 24px 0;
+    > button {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        display: block;
+        margin-bottom: 12px;
+        @include bold_14;
+        &:last-child {margin: 0;}
+        &.white {
+            background-color: $color_white;
+            border: 2px solid $color_primary;
+        } 
+        &.blue {
+            color: $color_white;
+            background-color: $color_blue;
+        }
+    }
+     
+}
+
+div.Link {
+    width: 100%;
+    text-align: center;
+    > a {
+        @include bold_12;
+        color: $color_primary;
+        margin-right: 10px;
+        padding-right: 10px;
+        &:last-child {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.Menu {
+    width: 50px;
+    background-color: $color_blue;
+    .Menu_Wrapper {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        .Menu_list {
+            position: absolute;
+            left: 0;
+            &.top {
+                top: 0;
+            }
+            &.bottom {
+                bottom: 0;
+            }
+            > button {
+                width: 100%;
+                height: 50px;
+                border-radius: 5px;
+                padding: 10px;
+                > img {
+                    width: 30px;
+                    height: 30px;
+                    z-index: 3;
+                }
+                &:hover {
+                    background-color: rgba(137, 168, 255, 0.5);
+                }
+                &.active {
+                    background-color: $color-primary;
+                }
+            }
+        }
+    }
+}

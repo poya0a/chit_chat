@@ -1,41 +1,44 @@
 const getStorage = (key: string) => {
-    return localStorage.getItem(key);
-}
+  return localStorage.getItem(key);
+};
 
 const setStorage = (key: string, value: string) => {
-    localStorage.setItem(key, value);
-}
+  localStorage.setItem(key, value);
+};
 
 const removeStorage = (key: string) => {
-    localStorage.removeItem(key);
-}
+  localStorage.removeItem(key);
+};
 
-const getAccessToken = () => {
-    return getStorage("user-access-token");
-}
+const getUid = () => {
+  return getStorage("user-uid");
+};
 
-const setAccessToken = (value: string) => {
-    return setStorage("user-access-token", value);
-}
+const setUid = (value: string) => {
+  return setStorage("user-uid", value);
+};
 
-const getRefreshToken = () => {
-    return getStorage("user-refresh-token");
-}
+const getDeviceKey = () => {
+  return getStorage("user-device-key");
+};
 
-const setRefreshToken = (value: string) => {
-    return setStorage("user-refresh-token", value);
-}
+const setDeviceKey = (value: string) => {
+  return setStorage("user-device-key", value);
+};
 
 const removeToken = () => {
-    removeStorage("user-access-token");
-    removeStorage("user-refresh-token");
-}
-
+  removeStorage("user-uid");
+  removeStorage("user-device-key");
+  removeStorage("user-email");
+  removeStorage("user-password");
+};
 
 export default {
-    getAccessToken: getAccessToken,
-    setAccessToken: setAccessToken,
-    getRefreshToken: getRefreshToken,
-    setRefreshToken: setRefreshToken,
-    removeToken: removeToken,
+  getStorage: getStorage,
+  setStorage: setStorage,
+  getUid: getUid,
+  setUid: setUid,
+  getDeviceKey: getDeviceKey,
+  setDeviceKey: setDeviceKey,
+  removeToken: removeToken,
 };

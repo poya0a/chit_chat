@@ -1,39 +1,46 @@
-import React, { useEffect, useState } from 'react';
-import { Route, Routes, useNavigate, useLocation } from 'react-router-dom';
+import React, { useEffect } from "react";
+import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
+import storage from "@utils/storage";
 
-import { AxiosInterceptor } from './common/api/ax';
-import { useAppSelector } from './store/store';
-import storage from './common/utils/storage';
-
-import Login from './components/pages/Login/Login';
-import Home from './components/pages/Home/Home';
-import Layout from './components/layouts/Layout';
-import ChatRoom from './components/pages/ChatRoom/ChatRoom';
-
+import Login from "@components/pages/Login/Login";
+import Layout from "@components/layouts/Layout";
+import ChatRoom from "@components/pages/ChatRoom/ChatRoom";
 
 function App() {
   const navigate = useNavigate();
-  const { login, devicekey } = useAppSelector((state) => state.login);
+  const { pathname } = useLocation();
+  const authPaths = [
+    "/auth/terms",
+    "/auth/join",
+    "/auth/find_id",
+    "/auth/find_password",
+    "/auth/find_password_reset",
+    "/auth/complete",
+  ];
 
   useEffect(() => {
-    if (devicekey) {
-      navigate('/');
+    const checkTokenAndNavigate = async () => {
+      const userUid = await storage.getUid();
+      if (!userUid) {
+        navigate("/login");
+      }
+    };
+    if (authPaths.includes(pathname)) {
+      return;
     } else {
-      navigate('/login');
+      checkTokenAndNavigate();
     }
-  }, [login, devicekey]);
+  }, []);
 
   return (
     <div className="wrap">
       <div className="content">
-        <AxiosInterceptor>
-          <Routes>
+        <Routes>
           <Route path="/login" element={<Login />} />
           <Route element={<Layout />}>
             <Route path="/" element={<ChatRoom />} />
-            </Route>
-          </Routes>
-        </AxiosInterceptor>
+          </Route>
+        </Routes>
       </div>
     </div>
   );

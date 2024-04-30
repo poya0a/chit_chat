@@ -1,22 +1,23 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux';
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { useDispatch, useSelector, TypedUseSelectorHook } from "react-redux";
 
-import loadingSlice from './slices/loadingSlice';
-import loginSlice from '../components/pages/Login/slices/loginSlice';
-import statusSlice from '../components/layouts/slices/statusSlice';
-import chatRoomSlice from '../components/pages/ChatRoom/slices/chatRoomSlice';
+import loadingSlice from "@components/common/loadingSlice";
+import statusSlice from "@components/layouts/slices/statusSlice";
+import chatRoomSlice from "@components/pages/ChatRoom/chatRoomSlice";
+import alertPopupSlice from "@components/common/popup/alertPopupSlice";
 
 const rootReducer = combineReducers({
+  alertPopup: alertPopupSlice.reducer,
   loading: loadingSlice.reducer,
-  login: loginSlice.reducer,
   status: statusSlice.reducer,
   chatRoom: chatRoomSlice.reducer,
 });
 
 export const store = configureStore({
   reducer: rootReducer,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware({ serializableCheck: false }),
-  devTools: process.env.NODE_ENV !== 'production'
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({ serializableCheck: false }),
+  devTools: process.env.NODE_ENV !== "production",
 });
 
 type RootState = ReturnType<typeof store.getState>;

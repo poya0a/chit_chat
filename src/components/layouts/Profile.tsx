@@ -1,11 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const Profile = () => {
-    return (
-        <div className='profileWrap'>
-            
-        </div>
-    );
+  return <section className="Profile"></section>;
 };
 
 export default Profile;
